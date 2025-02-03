@@ -67,6 +67,10 @@
                 string timeString = runner1;//неявное приведение к string
                 Console.WriteLine(timeString);
 
+                Console.WriteLine("\nЧасть 3");
+                RunnerArray ra1 = new RunnerArray(5);
+                ra1.Show();
+
 
             }
             catch (Exception ex)
