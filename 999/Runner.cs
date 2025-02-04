@@ -56,10 +56,7 @@ namespace _999
         {
             if (Math.Round(Distance / Speed, 2) != 0)
                 return Math.Round(Distance / Speed, 2);
-            else
-            {
-                return 0;
-            }
+            return 0;
         }
 
         public static double CalculatingTime(double speed, double distance)
@@ -112,6 +109,25 @@ namespace _999
         {
             return new Runner(r.Speed + sp, r.Distance);
         }
+
+        public static bool operator <(Runner r1, Runner r2)
+        {
+            if (r1 == null || r2 == null)
+            {
+                throw new Exception("");
+            }
+            return (r1.Distance < r2.Distance || r1.Distance == r2.Distance) && r1.CalculatingTime() > r2.CalculatingTime();
+        }
+
+        public static bool operator >(Runner r1, Runner r2)
+        {
+            if (r1 == null || r2 == null)
+            {
+                throw new Exception("");
+            }
+            return (r1.Distance < r2.Distance || r1.Distance == r2.Distance) && r1.CalculatingTime() > r2.CalculatingTime();
+        }
+
 
         public static explicit operator double(Runner r) //явное приведение
         {

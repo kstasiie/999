@@ -12,12 +12,14 @@ namespace _999
 
         static int count;
 
-        public static int GetCount
-        {
-            get => count; 
-        }
+       
 
         Runner[] runnerArray;
+
+        public static int GetCount
+        {
+            get => count;
+        }
 
         public int Length => runnerArray.Length;
 

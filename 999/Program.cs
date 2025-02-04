@@ -5,13 +5,29 @@ namespace _999
 {
     internal class Program
     {
-        public static void SortRunners(RunnerArray runnerArray) 
+        //public static void SortRunners(RunnerArray runnerArray) 
+        //{
+        //    for (int i = 0; i < runnerArray.Length - 1; i++)
+        //    {
+        //        for (int j = 0; j < runnerArray.Length - i - 1; j++) 
+        //        {
+        //            if (runnerArray[j].Distance < runnerArray[j + 1].Distance || runnerArray[j].Distance == runnerArray[j + 1].Distance && runnerArray[j].CalculatingTime() > runnerArray[j + 1].CalculatingTime())
+        //            {
+        //                Runner tempRunner = runnerArray[j];
+        //                runnerArray[j] = runnerArray[j + 1];
+        //                runnerArray[j + 1] = tempRunner;
+        //            }
+        //        }
+        //    }
+        //}
+
+        public static void SortRunners(RunnerArray runnerArray)
         {
             for (int i = 0; i < runnerArray.Length - 1; i++)
             {
-                for (int j = 0; j < runnerArray.Length - i - 1; j++) 
+                for (int j = 0; j < runnerArray.Length - i - 1; j++)
                 {
-                    if (runnerArray[j].Distance < runnerArray[j + 1].Distance || runnerArray[j].Distance == runnerArray[j + 1].Distance && runnerArray[j].CalculatingTime() > runnerArray[j + 1].CalculatingTime())
+                    if (runnerArray[j] < runnerArray[i])
                     {
                         Runner tempRunner = runnerArray[j];
                         runnerArray[j] = runnerArray[j + 1];
